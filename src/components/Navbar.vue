@@ -4,7 +4,7 @@
             <div data-w-id="abd500e1-d286-f8d1-dc17-d2164e6ed0a0" style="-webkit-transform:translate3d(0, 0, 0) scale3d(0.01, 0.01, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0.01, 0.01, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0.01, 0.01, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0.01, 0.01, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);display:none"
                 class="nav-menu">
                 <router-link to="/" class="nav-link w-inline-block">Home</router-link>
-                </a><a href="#Clients" class="nav-link w-inline-block">
+                <a href="#Clients" class="nav-link w-inline-block">
                     <div>CLIENTS</div>
                 </a>
                 <router-link to="/works" class="nav-link w-inline-block">Works</router-link>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    export default {
-        name: "Navbar"
-    }
+export default {
+  name: "Navbar"
+};
 </script>
