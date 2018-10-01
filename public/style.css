@@ -3138,6 +3138,10 @@ li {
     padding-bottom: 30px;
   }
 
+  .section.clients {
+    padding-bottom: 70px;
+  }
+
   .project-content {
     width: 75%;
   }
@@ -3340,6 +3344,10 @@ li {
   .section {
     padding-top: 25px;
     padding-bottom: 25px;
+  }
+
+  .section.clients {
+    padding-bottom: 70px;
   }
 
   .section.hero-section {
