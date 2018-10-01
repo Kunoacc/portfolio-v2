@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Loader></Loader>
     <Navbar v-once></Navbar>
     <router-view/>
   </div>
@@ -7,10 +8,11 @@
 
 <script>
 import Navbar from "./components/Navbar";
+import Loader from "./components/Loader";
 import { default as particle } from "particle.js";
 export default {
   components: {
-    Navbar
+    Navbar, Loader
   },
   created() {
     // this.initializeParticle();

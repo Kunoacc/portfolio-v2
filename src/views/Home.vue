@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Loader :key="key * 2"></Loader>
+        <Loader></Loader>
         <div id="Home" class="section hero-section">
             <div class="container">
                 <div class="hero-right">
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <About :key="key"></About>
+        <About></About>
         <div id="Clients" class="section clients">
             <div class="container">
                 <h2 class="section-title">Clients</h2>
@@ -51,7 +51,7 @@ export default {
   },
   data() {
     return {
-      key: this.$route.path + `/${Math.random()}`
+      
     };
   }
 };
