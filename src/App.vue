@@ -7,20 +7,9 @@
 
 <script>
 import Navbar from "./components/Navbar";
-import { default as particle } from "particle.js";
 export default {
   components: {
-    Navbar
-  },
-  created() {
-    // this.initializeParticle();
-  },
-  methods: {
-    initializeParticle: function() {
-      particle.load("app", "./assets/particle.json", () => {
-        console.log("particle loaded");
-      });
-    }
-  }
+    Navbar 
+}
 };
 </script>
