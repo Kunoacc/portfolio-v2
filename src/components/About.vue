@@ -28,7 +28,7 @@
                 </strong><span class="span"><strong class="bold-text">Koa</strong></span><strong class="bold-text">.<br /><br />My
                 </strong><span class="span"><strong class="bold-text">HTML</strong></span><strong class="bold-text">
                     &amp; </strong><span class="span"><strong class="bold-text">CSS</strong></span><strong class="bold-text">
-                    were average enough and i can build frontend applications with </strong><span class="span"><strong
+                    are average enough and i can build frontend applications with </strong><span class="span"><strong
                         class="bold-text">Vue.js</strong></span><strong class="bold-text"> (Like this website).</strong></h2>
             <div class="text-block-3"><a href="#" data-w-id="2bc71c17-fee8-1bfa-1c12-39ec3c00c8fb" class="reveal-bio">Read
                     More...</a></div>
