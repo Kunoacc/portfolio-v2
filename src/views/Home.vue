@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Loader></Loader>
+        <!-- <Loader></Loader> -->
         <div id="Home" class="section hero-section">
             <div class="container">
                 <div class="hero-right">
@@ -31,28 +31,22 @@
                 </div>
             </div>
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Loader from "@/components/Loader.vue";
-import Footer from "@/components/Footer.vue";
 import About from "@/components/About.vue";
-import { newScript } from "../../public/main.js";
 
 export default {
   name: "home",
   components: {
     Loader,
-    Footer,
     About
   },
   data() {
-    return {
-      
-    };
+    return {};
   }
 };
 </script>
@@ -64,5 +58,15 @@ export default {
 
 .clients-list {
   padding: 30px 0;
+}
+
+@media screen and (max-width: 479px) {
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+.section-title {
+  margin-bottom: 1rem;
 }
 </style>

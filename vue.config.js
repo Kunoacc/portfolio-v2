@@ -8,7 +8,8 @@ module.exports = {
             jquery: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
-            'window.$': 'jquery'
+            'window.$': 'jquery',
+            'window.tram': 'tram'
         }])
     }
 }

@@ -17,7 +17,7 @@
                             <div class="project-content">
                                 <h3 class="heading">{{work.data.name}}</h3>
                                 <p class="project-description">{{work.data.description}}</p><a :href="work.data.link.url"
-                                                                                           class="project-link" target="_blank">View Project -&gt;</a>
+                                    class="project-link" target="_blank">View Project -&gt;</a>
                             </div>
                         </div>
                     </div>
@@ -28,29 +28,57 @@
 </template>
 
 <script>
+import "vanilla-tilt";
+import VanillaTilt from "vanilla-tilt";
 export default {
-  name: 'Works',
-  data () {
+  name: "Works",
+  data() {
     return {
-      works: ''
-    }
+      works: ""
+    };
   },
-  created () {
-    this.getWorks()
+  mounted() {
+    this.getWorks().then(() => {
+      this.initTilt();
+    });
   },
   methods: {
-    getWorks: function () {
-      this.$prismic.client.query(
-        this.$prismic.Predicates.at('document.type', 'project'),
-        { orderings: '[my.project.uid]' }
-      ).then(response => {
-        this.works = response.results
-      })
+    getWorks: function() {
+      return new Promise(resolve => {
+        this.$prismic.client
+          .query(this.$prismic.Predicates.at("document.type", "project"), {
+            orderings: "[my.project.uid]"
+          })
+          .then(response => {
+            this.works = response.results;
+            resolve();
+          });
+      });
+    },
+    initTilt: function() {
+      const el = document.querySelectorAll(".project-content");
+      VanillaTilt.init(el);
     }
   }
-}
+};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@media screen and (max-width: 479px) {
+  .section {
+    padding: 50px 0px;
+  }
+  .section-title {
+    font-size: 30px;
+  }
+}
 
+.project-content {
+  transform-style: preserve-3d;
+}
+
+.project-description {
+  transform: translateZ(20px);
+}
 </style>
+

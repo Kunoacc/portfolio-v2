@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import {
-  newScript
-} from '../public/main'
 Vue.use(Router)
 
 export default new Router({
