@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Loader v-if="shouldShowLoader"></Loader>
         <div id="Home" class="section hero-section">
             <div class="container">
                 <div class="hero-right">
@@ -35,30 +34,19 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Loader from "@/components/Loader.vue";
-import About from "@/components/About.vue";
+import About from '@/components/About.vue'
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
-    Loader,
     About
-  },
-  data() {
-    return {
-      shouldShowLoader: this.$route.meta.shouldShowLoader
-    };
-  },
-  created() {
-    setTimeout(() => (this.$route.meta.shouldShowLoader = false), 5000);
   }
-};
+}
 </script>
 
 <style scoped>
 .div-block-2 {
-  background-image: url("http://res.cloudinary.com/adinell/image/upload/c_scale,h_1080,w_1900/v1538924168/portfolio%20data/home_banner.jpg");
+  background-image: url("https://res.cloudinary.com/adinell/image/upload/c_scale,h_1080,w_1900/v1538924168/portfolio%20data/home_banner.jpg");
 }
 
 .clients-list {

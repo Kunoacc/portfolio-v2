@@ -52,76 +52,75 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 export default {
-  name: "Contact",
-  data() {
+  name: 'Contact',
+  data () {
     return {
-      email: "",
-      name: "",
-      message: "",
-      response: "",
+      email: '',
+      name: '',
+      message: '',
+      response: '',
       isSending: false
-    };
+    }
   },
   methods: {
-    validate: function() {
+    validate: function () {
       return new Promise((resolve, reject) => {
-        if (this.email === "" || this.name === "" || this.message === "") {
-          reject();
+        if (this.email === '' || this.name === '' || this.message === '') {
+          reject('All fields are required')
         }
-        resolve();
-      });
+        resolve()
+      })
     },
-    send: function(event) {
-      event.preventDefault();
+    send: function (event) {
+      event.preventDefault()
       this.validate()
         .then(() => {
-          this.isSending = true;
-          var form = new FormData();
-          form.append("inputEmail", this.email);
-          form.append("inputName", this.name);
-          form.append("inputMessage", this.message);
+          this.isSending = true
+          var form = new FormData()
+          form.append('inputEmail', this.email)
+          form.append('inputName', this.name)
+          form.append('inputMessage', this.message)
 
           axios
-            .post("http://old.nelsonatuonwu.me/contact-form.php", form)
+            .post('https://old.nelsonatuonwu.me/contact-form.php', form)
             .then(response => {
-              this.isSending = false;
-              this.response = response.data;
+              this.isSending = false
+              this.response = response.data
               //   this.clear()
-              setTimeout(() => (this.response = ""), 5000);
+              setTimeout(() => (this.response = ''), 5000)
             })
             .catch(err => {
-              this.isSending = false;
+              this.isSending = false
               this.response = {
                 success: false,
-                message: "Something went wrong. Try again later"
-              };
-            });
+                message: 'Something went wrong. Try again later'
+              }
+            })
         })
-        .catch(() => {
-          this.isSending = false;
+        .catch(err => {
+          this.isSending = false
           this.response = {
             success: false,
-            message: "All fields are required"
-          };
-        });
+            message: err
+          }
+        })
     },
-    clear: function() {
+    clear: function () {
       setTimeout(() => {
-        (this.name = ""),
-          (this.message = ""),
-          (this.email = ""),
-          (this.response = "");
-      }, 5000);
+        (this.name = '')((this.message = ''))((this.email = ''))(
+          (this.response = '')
+        )
+      }, 5000)
     }
   },
   computed: {
-    firstName: function() {
-      return this.name.split(" ")[0];
+    firstName: function () {
+      return this.name.split(' ')[0]
     }
   }
-};
+}
 </script>
 
 <style scoped>

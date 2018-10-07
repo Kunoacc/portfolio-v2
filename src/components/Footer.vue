@@ -27,18 +27,18 @@
 
 <script>
 export default {
-  name: "Footer",
-  data() {
+  name: 'Footer',
+  data () {
     return {
       year: new Date().getFullYear()
-    };
+    }
   },
   methods: {
-    navigator: function(url) {
-      window.open(url, "_blank");
+    navigator: function (url) {
+      window.open(url, '_blank')
     }
   }
-};
+}
 </script>
 
 <style scoped>

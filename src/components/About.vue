@@ -47,46 +47,46 @@
 </template>
 
 <script>
-import * as scroll from "smoothscroll";
-import * as tram from "tram";
+import * as scroll from 'smoothscroll'
+import * as tram from 'tram'
 export default {
-  name: "About",
-  data() {
+  name: 'About',
+  data () {
     return {
-      reveal_text: "Read More ...",
+      reveal_text: 'Read More ...',
       is_revealed: false
-    };
+    }
   },
   methods: {
-    toggleBio: function() {
-      this.is_revealed ? this.collapseBio() : this.revealBio();
-      this.is_revealed = !this.is_revealed;
+    toggleBio: function () {
+      this.is_revealed ? this.collapseBio() : this.revealBio()
+      this.is_revealed = !this.is_revealed
     },
-    revealBio: function() {
-      const bio = $(".more-bio");
-      bio.css("display", "block");
+    revealBio: function () {
+      const bio = $('.more-bio')
+      bio.css('display', 'block')
       tram(bio)
-        .add("transform 500ms ease")
+        .add('transform 500ms ease')
         .start({
-          height: "0%",
+          height: '0%',
           opacity: 1
-        });
-      this.reveal_text = "Collapse Bio ...";
-      scroll(document.querySelector(".more-bio"));
+        })
+      this.reveal_text = 'Collapse Bio ...'
+      scroll(document.querySelector('.more-bio'))
     },
-    collapseBio: function() {
-      const bio = $(".more-bio");
-      bio.css("display", "block");
+    collapseBio: function () {
+      const bio = $('.more-bio')
+      bio.css('display', 'block')
       tram(bio)
-        .add("transform 500ms ease")
+        .add('transform 500ms ease')
         .start({
           height: 0,
           opacity: 0
         })
-        .then(() => bio.css("display", "none"));
-      this.reveal_text = "Read More ...";
-      scroll(document.querySelector(".short-bio"));
+        .then(() => bio.css('display', 'none'))
+      this.reveal_text = 'Read More ...'
+      scroll(document.querySelector('.short-bio'))
     }
   }
-};
+}
 </script>
