@@ -1607,7 +1607,7 @@ li {
     width: 100%;
     margin-top: -1px;
     margin-right: 0px;
-    padding: 20px;
+    padding: 30px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
@@ -1665,7 +1665,7 @@ li {
   }
 
   .loader {
-    display: none;
+    /* display: none; */
   }
 
   .loader-text {

@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     navigator: function(url) {
-      //   $(`<a href="${url}" target="_blank"></a>`).trigger('click');
       window.open(url, "_blank");
     }
   }

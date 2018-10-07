@@ -9,7 +9,7 @@ import '../public/style.css'
 Vue.config.productionTip = false
 
 Vue.use(PrismicVue, {
-  endpoint: window.prismic.endpoint,
+  endpoint: 'https://nelfolio.prismic.io/api/v2',
   LinkResolver
 })
 

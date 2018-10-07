@@ -9,7 +9,7 @@ export default new Router({
       name: 'home',
       component: Home,
       meta: {
-        reuse: false
+        shouldShowLoader: true
       }
     },
     {
