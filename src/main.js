@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import PrismicVue from 'prismic-vue'
 import LinkResolver from './utils/link-resolver'
-import '../public/style.css'
+import './assets/style.min.css'
 
 Vue.config.productionTip = false
 

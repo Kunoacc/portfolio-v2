@@ -267,7 +267,6 @@ html.mod-touch * {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  vertical-align: middle;
   background-color: #ffffff;
   border: 1px solid #cccccc
 }
@@ -344,7 +343,7 @@ input.button {
   -webkit-appearance: button
 }
 
-html[data- dynpage] [data- cloak] {
+html[data-dynpage] [data-cloak] {
   color: transparent !important
 }
 
@@ -1662,10 +1661,6 @@ li {
     -webkit-transform-origin: 0% 0%;
     -ms-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
-  }
-
-  .loader {
-    /* display: none; */
   }
 
   .loader-text {

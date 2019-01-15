@@ -3,19 +3,19 @@
     <div id="Works" class="section">
       <div class="container">
         <h2 class="section-title">My Works</h2>
-        <div class="collection-list-wrapper  dyn-list">
-          <div class="project-items">
+        <div class="collection-list-wrapper dyn-list">
             <content-loader
             :height="200"
             :width="350"
-		:speed="2" v-if="isLoading">
+            :speed="2" v-if="isLoading">
               <rect x="178.4" y="137.65" rx="5" ry="5" width="156" height="9.24" />
               <rect x="12.4" y="10.45" rx="5" ry="5" width="266" height="120.2" />
               <rect x="178.4" y="152.65" rx="5" ry="5" width="156" height="9.24" />
 		          <rect x="180.4" y="167.65" rx="5" ry="5" width="156" height="9.24" />
 	          	<rect x="180.4" y="181.65" rx="5" ry="5" width="67.08" height="9.24" />
             </content-loader>
-            <div class="project project-item" v-for="work in works" v-if="!isLoading">
+          <div class="project-items" v-if="!isLoading">
+            <div class="project project-item" v-for="work in works">
               <div :style="{'background-image': 'url('+work.data.image_main.url+')'}" class="project-image">
                 <div :style="{'background-color': work.data.overlay_color}" class="project-image-cover"></div>
                 <div class="project-number-holder">
@@ -75,7 +75,10 @@ export default {
     },
     initTilt: function() {
       const el = document.querySelectorAll(".project-content");
-      VanillaTilt.init(el);
+      VanillaTilt.init(el, {
+        max: 15,
+        scale: 1.05
+      });
     },
     isOnMobile: function() {
       return "ontouchstart" in document.documentElement;
