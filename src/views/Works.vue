@@ -103,13 +103,6 @@ export default {
   transform: translateZ(20px);
 }
 
-.img-loader {
-  text-align: center;
-  padding: 50px 0px;
-  margin: auto;
-  width: 35px;
-}
-
 .project-items {
   text-align: center;
 }
