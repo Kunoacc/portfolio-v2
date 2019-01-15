@@ -4,23 +4,17 @@ import router from './router'
 import store from './store'
 import PrismicVue from 'prismic-vue'
 import LinkResolver from './utils/link-resolver'
-import {
-  newScript
-} from '../public/main.js'
-import '../public/style.css'
+import './assets/style.min.css'
 
 Vue.config.productionTip = false
 
 Vue.use(PrismicVue, {
-  endpoint: window.prismic.endpoint,
+  endpoint: 'https://nelfolio.prismic.io/api/v2',
   LinkResolver
 })
 
 new Vue({
   router,
   store,
-  mounted() {
-    newScript.start();
-  },
   render: h => h(App)
 }).$mount('#app')
