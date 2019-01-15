@@ -55,7 +55,7 @@ export default {
   mounted() {
     this.getWorks().then(() => {
       if (!this.isOnMobile()) {
-        this.initTilt();
+        // this.initTilt();
       }
     });
   },
