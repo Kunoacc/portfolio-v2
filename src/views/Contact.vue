@@ -124,11 +124,11 @@ export default {
 </script>
 
 <style scoped>
-. form-done {
+.form-done {
   color: rgb(17, 182, 17);
 }
 
-. form-fail {
+.form-fail {
   color: rgb(224, 30, 30);
 }
 
