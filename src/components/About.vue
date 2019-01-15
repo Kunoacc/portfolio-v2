@@ -26,10 +26,10 @@
           I&#x27;ve picked up a couple of other frameworks and Languages but Laravel
           is by far the framework i&#x27;m most comfortable with.<br /><br />I&#x27;ve built mobile apps
           with </strong><span class="span"><strong class="bold-text">Nativescript</strong></span><strong class="bold-text">
-          and recently completed the </strong><span class="span"><strong class="bold-text">Flutter
+          and completed the </strong><span class="span"><strong class="bold-text">Flutter
           </strong></span><strong class="bold-text">+ </strong><span class="span"><strong class="bold-text">Dart
           </strong></span><strong class="bold-text">courses on </strong><span>Udemy</span><strong class="bold-text">
-          and i&#x27;m looking forward to working with those very soon. I&#x27;ve also built API&#x27;s with </strong><span
+          and proceeded to build beautiful apps with Flutter. I&#x27;ve also built API&#x27;s with </strong><span
           class="span"><strong class="bold-text">Lumen </strong></span><strong class="bold-text">and
         </strong><span class="span"><strong class="bold-text">Laravel</strong></span><strong class="bold-text">,
         </strong><span class="span"><strong class="bold-text">Express</strong></span><strong class="bold-text">,

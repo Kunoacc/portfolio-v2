@@ -5,7 +5,16 @@
         <h2 class="section-title">My Works</h2>
         <div class="collection-list-wrapper  dyn-list">
           <div class="project-items">
-            <img src="@/assets/loader.svg" alt="" v-if="isLoading" class="img-loader" />
+            <content-loader
+            :height="200"
+            :width="350"
+		:speed="2" v-if="isLoading">
+              <rect x="178.4" y="137.65" rx="5" ry="5" width="156" height="9.24" />
+              <rect x="12.4" y="10.45" rx="5" ry="5" width="266" height="120.2" />
+              <rect x="178.4" y="152.65" rx="5" ry="5" width="156" height="9.24" />
+		          <rect x="180.4" y="167.65" rx="5" ry="5" width="156" height="9.24" />
+	          	<rect x="180.4" y="181.65" rx="5" ry="5" width="67.08" height="9.24" />
+            </content-loader>
             <div class="project project-item" v-for="work in works" v-if="!isLoading">
               <div :style="{'background-image': 'url('+work.data.image_main.url+')'}" class="project-image">
                 <div :style="{'background-color': work.data.overlay_color}" class="project-image-cover"></div>
@@ -31,6 +40,7 @@
 
 <script>
 import VanillaTilt from "vanilla-tilt";
+import { ContentLoader } from "vue-content-loader";
 export default {
   name: "Works",
   data() {
@@ -38,6 +48,9 @@ export default {
       works: "",
       isLoading: true
     };
+  },
+  components: {
+    ContentLoader
   },
   mounted() {
     this.getWorks().then(() => {
