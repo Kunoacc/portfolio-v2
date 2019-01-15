@@ -244,21 +244,21 @@ img {
   display: inline-block
 }
 
-html.w-mod-touch * {
+html.mod-touch * {
   background-attachment: scroll !important
 }
 
-.w-block {
+.block {
   display: block
 }
 
-.w-inline-block {
+.inline-block {
   max-width: 100%;
   display: inline-block
 }
 
-.w-input,
-.w-select {
+.input,
+.select {
   display: block;
   width: 100%;
   height: 38px;
@@ -272,63 +272,63 @@ html.w-mod-touch * {
   border: 1px solid #cccccc
 }
 
-.w-input:-moz-placeholder,
-.w-select:-moz-placeholder {
+.input:-moz-placeholder,
+.select:-moz-placeholder {
   color: #999
 }
 
-.w-input::-moz-placeholder,
-.w-select::-moz-placeholder {
+.input::-moz-placeholder,
+.select::-moz-placeholder {
   color: #999;
   opacity: 1
 }
 
-.w-input:-ms-input-placeholder,
-.w-select:-ms-input-placeholder {
+.input:-ms-input-placeholder,
+.select:-ms-input-placeholder {
   color: #999
 }
 
-.w-input::-webkit-input-placeholder,
-.w-select::-webkit-input-placeholder {
+.input::-webkit-input-placeholder,
+.select::-webkit-input-placeholder {
   color: #999
 }
 
-.w-input:focus,
-.w-select:focus {
+.input:focus,
+.select:focus {
   border-color: #3898EC;
   outline: 0
 }
 
-.w-input[disabled],
-.w-select[disabled],
-.w-input[readonly],
-.w-select[readonly],
-fieldset[disabled] .w-input,
-fieldset[disabled] .w-select {
+.input[disabled],
+.select[disabled],
+.input[readonly],
+.select[readonly],
+fieldset[disabled].input,
+fieldset[disabled].select {
   cursor: not-allowed;
   background-color: #eeeeee
 }
 
-textarea.w-input,
-textarea.w-select {
+textarea.input,
+textarea.select {
   height: auto
 }
 
-.w-clearfix:before,
-.w-clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   display: table
 }
 
-.w-clearfix:after {
+.clearfix:after {
   clear: both
 }
 
-.w-hidden {
+.hidden {
   display: none
 }
 
-.w-button {
+.button {
   display: inline-block;
   padding: 9px 15px;
   background-color: #3898EC;
@@ -340,11 +340,11 @@ textarea.w-select {
   border-radius: 0
 }
 
-input.w-button {
+input.button {
   -webkit-appearance: button
 }
 
-html[data-w-dynpage] [data-w-cloak] {
+html[data- dynpage] [data- cloak] {
   color: transparent !important
 }
 
@@ -424,7 +424,7 @@ ol {
   padding-left: 40px
 }
 
-.w-list-unstyled {
+.list-unstyled {
   padding-left: 0;
   list-style: none
 }

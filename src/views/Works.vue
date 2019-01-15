@@ -3,10 +3,10 @@
     <div id="Works" class="section">
       <div class="container">
         <h2 class="section-title">My Works</h2>
-        <div class="collection-list-wrapper w-dyn-list">
-          <div class="w-dyn-items">
+        <div class="collection-list-wrapper  dyn-list">
+          <div class="project-items">
             <img src="@/assets/loader.svg" alt="" v-if="isLoading" class="img-loader" />
-            <div class="project w-dyn-item" v-for="work in works" v-if="!isLoading">
+            <div class="project project-item" v-for="work in works" v-if="!isLoading">
               <div :style="{'background-image': 'url('+work.data.image_main.url+')'}" class="project-image">
                 <div :style="{'background-color': work.data.overlay_color}" class="project-image-cover"></div>
                 <div class="project-number-holder">
@@ -30,45 +30,45 @@
 </template>
 
 <script>
-import VanillaTilt from 'vanilla-tilt'
+import VanillaTilt from "vanilla-tilt";
 export default {
-  name: 'Works',
-  data () {
+  name: "Works",
+  data() {
     return {
-      works: '',
+      works: "",
       isLoading: true
-    }
+    };
   },
-  mounted () {
+  mounted() {
     this.getWorks().then(() => {
       if (!this.isOnMobile()) {
-        this.initTilt()
+        this.initTilt();
       }
-    })
+    });
   },
   methods: {
-    getWorks: function () {
+    getWorks: function() {
       return new Promise(resolve => {
         this.$prismic.client
-          .query(this.$prismic.Predicates.at('document.type', 'project'), {
-            orderings: '[my.project.uid]'
+          .query(this.$prismic.Predicates.at("document.type", "project"), {
+            orderings: "[my.project.uid]"
           })
           .then(response => {
-            this.isLoading = false
-            this.works = response.results
-            resolve()
-          })
-      })
+            this.isLoading = false;
+            this.works = response.results;
+            resolve();
+          });
+      });
     },
-    initTilt: function () {
-      const el = document.querySelectorAll('.project-content')
-      VanillaTilt.init(el)
+    initTilt: function() {
+      const el = document.querySelectorAll(".project-content");
+      VanillaTilt.init(el);
     },
-    isOnMobile: function () {
-      return 'ontouchstart' in document.documentElement
+    isOnMobile: function() {
+      return "ontouchstart" in document.documentElement;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -97,7 +97,7 @@ export default {
   width: 35px;
 }
 
-.w-dyn-items {
+.project-items {
   text-align: center;
 }
 

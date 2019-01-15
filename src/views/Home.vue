@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="hero-right">
                     <div class="div-block-2"></div>
-                    <ul class="unordered-list w-list-unstyled">
+                    <ul class="unordered-list  list-unstyled">
                         <li class="list-item">UI/UX +</li>
                         <li class="list-item-2">Web Development +</li>
                         <li class="list-item-3">Mobile Development +</li>
@@ -20,11 +20,11 @@
         <div id="Clients" class="section clients">
             <div class="container">
                 <h2 class="section-title">Clients</h2>
-                <div class="w-dyn-list">
-                    <div class="client-wrapper w-dyn-items">
-                        <div class="collection-item w-dyn-item"><img width="383" src="https://uploads-ssl.webflow.com/5bac13e268e04c4447f676f3/5bb1f1acca2e96f990db0d76_Asset 16.svg"
+                <div class=" dyn-list">
+                    <div class="client-wrapper project-items">
+                        <div class="collection-item project-item"><img width="383" src="https://uploads-ssl.webflow.com/5bac13e268e04c4447f676f3/5bb1f1acca2e96f990db0d76_Asset 16.svg"
                                 alt="Circle Church Nigeria" /></div>
-                        <div class="collection-item w-dyn-item"><img width="383" src="https://uploads-ssl.webflow.com/5bac13e268e04c4447f676f3/5bb1eff1ca2e965237db0adb_logo.svg"
+                        <div class="collection-item project-item"><img width="383" src="https://uploads-ssl.webflow.com/5bac13e268e04c4447f676f3/5bb1eff1ca2e965237db0adb_logo.svg"
                                 alt="Cool FM Nigeria" /></div>
                     </div>
                 </div>
@@ -34,14 +34,14 @@
 </template>
 
 <script>
-import About from '@/components/About.vue'
+import About from "@/components/About.vue";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
     About
   }
-}
+};
 </script>
 
 <style scoped>
