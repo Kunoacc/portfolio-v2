@@ -15,18 +15,20 @@
 	          	<rect x="180.4" y="181.65" rx="5" ry="5" width="67.08" height="9.24" />
             </content-loader>
           <div class="project-items" v-if="!isLoading">
-            <div class="project project-item" v-for="work in works">
+            <div class="project project-item" v-for="(work, index) in works" :key="index">
               <div :style="{'background-image': 'url('+work.data.image_main.url+')'}" class="project-image">
                 <div :style="{'background-color': work.data.overlay_color}" class="project-image-cover"></div>
                 <div class="project-number-holder">
-                  <div class="project-number">{{work.uid}}</div>
+                  <div class="project-number">{{readableNumber((index+1).toString(10))}}</div>
                   <div class="project-type">{{work.data.project_type}}</div>
                 </div>
               </div>
               <div class="project-preview">
                 <div class="project-content">
                   <h3 class="heading">{{work.data.name}}</h3>
-                  <p class="project-description">{{work.data.description}}</p><a :href="work.data.link.url" class="project-link"
+                  <p class="project-description">{{work.data.description}}</p>
+                  <span class="project-description">Completed: {{formatDate(work.data.completion_date)}}</span>
+                  <a :href="work.data.link.url" class="project-link"
                     target="_blank">View Project -&gt;</a>
                 </div>
               </div>
@@ -41,6 +43,7 @@
 <script>
 import VanillaTilt from "vanilla-tilt";
 import { ContentLoader } from "vue-content-loader";
+import { distanceInWordsToNow } from "date-fns";
 export default {
   name: "Works",
   data() {
@@ -82,6 +85,15 @@ export default {
     },
     isOnMobile: function() {
       return "ontouchstart" in document.documentElement;
+    },
+    readableNumber(number){
+      if(number.length < 2){
+        return '0' + number
+      }
+      return number
+    },
+    formatDate(date){
+      return date ?  distanceInWordsToNow(date) + " ago" : "Ongoing"
     }
   }
 };
