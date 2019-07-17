@@ -22,10 +22,14 @@
                 <h2 class="section-title">Clients</h2>
                 <div class=" dyn-list">
                     <div class="client-wrapper project-items">
-                        <div class="collection-item project-item"><img width="383" src="https://uploads-ssl.webflow.com/5bac13e268e04c4447f676f3/5bb1f1acca2e96f990db0d76_Asset 16.svg"
+                        <div class="collection-item project-item"><img :src="ccLogo"
                                 alt="Circle Church Nigeria" /></div>
-                        <div class="collection-item project-item"><img width="383" src="https://uploads-ssl.webflow.com/5bac13e268e04c4447f676f3/5bb1eff1ca2e965237db0adb_logo.svg"
+                        <div class="collection-item project-item"><img :src="coolLogo"
                                 alt="Cool FM Nigeria" /></div>
+                        <div class="collection-item project-item"><img :src="accessLogo"
+                                alt="Access Bank" /></div>
+                        <div class="collection-item project-item"><img :src="affLogo"
+                                alt="African fintech foundry" /></div>
                     </div>
                 </div>
             </div>
@@ -40,6 +44,20 @@ export default {
   name: "home",
   components: {
     About
+  },
+  computed: {
+    accessLogo(){
+      return require('@/assets/access.svg')
+    },
+    affLogo(){
+      return require('@/assets/aff.svg')
+    },
+    coolLogo(){
+      return require('@/assets/coolfm.svg')
+    },
+    ccLogo(){
+      return require('@/assets/cclogo.svg')
+    },
   }
 };
 </script>
@@ -53,7 +71,7 @@ export default {
   padding: 30px 0;
 }
 
-@media screen and (max-width: 479px) {
+@media (max-width: 479px) {
   .section-title {
     font-size: 30px;
   }
